@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import React from "react";
+import PersonIcon from '@mui/icons-material/Person';
 
 const App = (props: any) => {
 	const [users, setUsers] = useState([
@@ -18,6 +20,7 @@ const App = (props: any) => {
 			<div className="card">
         {loading ? <h2>Carregando...</h2> : null}
 				<ul>
+          <PersonIcon />
 					{users.map((user) => (
 						<li key={user.id}>{user.name}</li>
 					))}
@@ -28,4 +31,3 @@ const App = (props: any) => {
 };
 
 export default App;
-
